@@ -103,7 +103,7 @@ export default defineComponent({
 							class: 'vrt-tree__item vrt-tree__item--has-more',
 							onClick: ($event: Event) => { $event.stopPropagation(); this.expandItem(item); }
 						},
-						item.name),
+						slotContent),
 					h(Transition, { name: "slide" }, this.navigationPath.includes(item.id) ? h('ul',
 						{ class: 'vrt-tree' },
 						this.renderTree(item.children)) : '')])
