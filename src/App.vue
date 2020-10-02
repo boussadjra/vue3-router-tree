@@ -1,7 +1,11 @@
 <template>
 <div class="demo">
-    <vue-router-tree :items="routes" defaultOpen="Home" title="My Tree" activeColor="#77dd42"></vue-router-tree>
-
+    <vue-router-tree :items="routes" title="My Tree">
+        <template #item="{item}">
+            <component :is="'Carbon'+item.name"></component>
+            {{item.name}}
+        </template>
+    </vue-router-tree>
 </div>
 </template>
 
@@ -12,6 +16,9 @@ import {
 import {
     RouteRecordRaw
 } from "vue-router";
+import CarbonHome from "./components/icons/CarbonHome.vue";
+import CarbonDashboard from "./components/icons/CarbonDashboard.vue";
+import CarbonComponents from "./components/icons/CarbonComponents.vue";
 
 import VueRouterTree from "./components/VueRouterTree/index";
 export default defineComponent({
@@ -90,6 +97,9 @@ export default defineComponent({
     },
     components: {
         VueRouterTree,
+        CarbonComponents,
+        CarbonDashboard,
+        CarbonHome,
     },
 });
 </script>

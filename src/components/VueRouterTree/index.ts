@@ -22,6 +22,10 @@ export default defineComponent({
 		activeColor: {
 			type: String,
 			default: "#5d1df1"
+		},
+		defaultOpen: {
+			type: String,
+			default: ''
 		}
 	},
 	components: {
@@ -35,11 +39,21 @@ export default defineComponent({
 		}
 	},
 	computed: {
-		menuItems(): Array<any> {
+		menuItems(): Array<TreeNode> {
 			let _items = this.items ? this.items : this.$router.options.routes;
 
 			return this.addId(_items)
 		}
+	},
+	mounted() {
+		let found = this.menuItems.find(item => item.name === this.defaultOpen)
+
+		if (found) {
+			this.expandItem(found)
+		}
+		console.log('--------------------')
+		console.log(this.$slots)
+		console.log('--------------------')
 	},
 	methods: {
 		addId(items: Array<TreeNode | RouteRecordRaw>): any {
@@ -61,18 +75,25 @@ export default defineComponent({
 
 				this.navigationPath = this.navigationPath.filter(el => el !== item.id)
 			} else {
-				if(this.menuItems.find(_item=>_item.id===item.id) && this.navigationPath.length>0){
-					this.navigationPath=[];
+				if (this.menuItems.find(_item => _item.id === item.id) && this.navigationPath.length > 0) {
+					this.navigationPath = [];
 					this.navigationPath.push(item.id)
-				}else{
+				} else {
 					this.navigationPath.push(item.id)
 				}
-				
+
 			}
 
 
 		},
 		renderItems(item: TreeNode, index: number): any {
+
+       
+
+			let slotContent = this.$slots.item ?
+				this.$slots.item({
+					item: item
+				}) : item.name
 
 			if (item.children) {
 				return h('li', { class: ` vrt-tree vrt-tree--has-children`, style: { color: `${this.navigationPath.includes(item.id) ? this.activeColor : ''}` } },
@@ -87,7 +108,8 @@ export default defineComponent({
 						{ class: 'vrt-tree' },
 						this.renderTree(item.children)) : '')])
 			} else {
-				return h('li', { class: 'vrt-tree__item' }, item.component ? h(RouterLink, { to: item.path }, item.name) : item.name)
+				return h('li', { class: 'vrt-tree__item' }, item.component ? h(RouterLink, { to: item.path }, item.name) : h('div', {},
+					slotContent))
 			}
 		},
 	},
