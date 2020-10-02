@@ -1,8 +1,7 @@
 <template>
 <div class="demo">
-    <vue-router-tree :items='routes' title="My Tree">
-     
-    </vue-router-tree>
+    <vue-router-tree :items="routes" defaultOpen="Home" title="My Tree" activeColor="#77dd42"></vue-router-tree>
+
 </div>
 </template>
 
@@ -30,36 +29,62 @@ export default defineComponent({
                     path: "/component",
                     name: "Components",
                     children: [{
-                            path: '/alerts',
-                            name: 'Alerts',
+                            path: "/alerts",
+                            name: "Alerts",
                         },
                         {
-                            path: '/avatars',
-                            name: 'Avatars',
+                            path: "/avatars",
+                            name: "Avatars",
                         },
                         {
-                            path: '/buttons',
-                            name: 'Buttons',
+                            path: "/buttons",
+                            name: "Buttons",
                         },
-                    ]
+                        {
+                            path: "/forms",
+                            name: "Forms",
+                            children: [{
+                                    path: "/autocompletes",
+                                    name: "Autocompletes",
+                                },
+                                {
+                                    path: "/checkboxes",
+                                    name: "Checkboxes",
+                                },
+                                {
+                                    path: "/inputs",
+                                    name: "Inputs",
+                                    children: [{
+                                            path: "/file-inputs",
+                                            name: "File inputs",
+                                        },
+                                        {
+                                            path: "/text-inputs",
+                                            name: "Text inputs",
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
                 },
                 {
                     path: "/mail",
                     name: "Mail",
                     children: [{
-                            path: '/sent',
-                            name: 'Sent',
+                            path: "/sent",
+                            name: "Sent",
                         },
                         {
-                            path: '/avatars',
-                            name: 'Avatars',
+                            path: "/avatars",
+                            name: "Avatars",
                         },
                         {
-                            path: '/buttons',
-                            name: 'Buttons',
+                            path: "/buttons",
+                            name: "Buttons",
                         },
-                    ]
-                }
+                    ],
+                },
             ],
         };
     },

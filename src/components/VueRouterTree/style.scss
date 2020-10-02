@@ -3,7 +3,8 @@
     color: #444645;
     list-style: none;
     padding: 12px;
-    max-width: 200px;
+    max-width: 280px;
+    // width: 20px;
     &__item {
         padding: 10px;
         position: relative;
@@ -14,21 +15,29 @@
         }
         &_caret {
             position: absolute;
-            left: 10px;
-            padding: 10px 0;
+            right: 0px;
+            padding: 4px 0;
+            opacity: .6;
             cursor: pointer;
+            transform: rotate(90deg);
+            transition: transform .3s ease-in;
+            &--open {
+                transform: rotate(-90deg);
+                transition: transform .3s ease-in;
+            }
         }
         &--has-more {
-            padding: 10px 0;
+            padding: 4px 0;
             height: 100%;
             &:hover {
-                background-color: inherit;
+                background-color: unset;
                 // border-radius: 4px;
             }
         }
     }
     &--has-children {
         padding: 8px 8px;
+        position: relative;
     }
 }
 
