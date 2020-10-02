@@ -1,5 +1,5 @@
 .vrt-tree {
-    background-color: #F6F7EB;
+    // background-color: #F6F7EB;
     color: #444645;
     list-style: none;
     padding: 12px;
@@ -9,6 +9,8 @@
         padding: 10px;
         position: relative;
         cursor: pointer;
+        display: grid;
+        grid-template-columns: 32px auto;
         &:hover {
             background-color: #e1e1e1;
             border-radius: 4px;

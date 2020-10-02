@@ -19,6 +19,7 @@ import {
 import CarbonHome from "./components/icons/CarbonHome.vue";
 import CarbonDashboard from "./components/icons/CarbonDashboard.vue";
 import CarbonComponents from "./components/icons/CarbonComponents.vue";
+import CarbonMail from "./components/icons/CarbonMail.vue";
 
 import VueRouterTree from "./components/VueRouterTree/index";
 export default defineComponent({
@@ -100,17 +101,21 @@ export default defineComponent({
         CarbonComponents,
         CarbonDashboard,
         CarbonHome,
+        CarbonMail
     },
 });
 </script>
 
 <style lang="scss">
-#demo {
+.demo {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // text-align: center;
     color: #2c3e50;
+    box-shadow: 0 0 10px #ddd;
+    width: min-content;
+    min-width: 280px;
 }
 
 #nav {

@@ -51,9 +51,7 @@ export default defineComponent({
 		if (found) {
 			this.expandItem(found)
 		}
-		console.log('--------------------')
-		console.log(this.$slots)
-		console.log('--------------------')
+	
 	},
 	methods: {
 		addId(items: Array<TreeNode | RouteRecordRaw>): any {
@@ -108,12 +106,11 @@ export default defineComponent({
 						{ class: 'vrt-tree' },
 						this.renderTree(item.children)) : '')])
 			} else {
-				return h('li', { class: 'vrt-tree__item' }, item.component ? h(RouterLink, { to: item.path }, item.name) : h('div', {},
-					slotContent))
+				return h('li', { class: 'vrt-tree__item' }, item.component ? h(RouterLink, { to: item.path }, item.name) :slotContent)
 			}
 		},
 	},
 	render(): VNode {
-		return h(h('ul', { class: 'vrt-tree' }), this.renderTree(this.menuItems || []));
+		return h(h('ul', { class: 'vrt-tree vrt-tree__wrapper' }), this.renderTree(this.menuItems || []));
 	},
 });
