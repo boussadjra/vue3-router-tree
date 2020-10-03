@@ -1,4 +1,4 @@
-# vue-router-tree
+# Vue 3 router tree
 
 This component is based on **Vue.js 3**, it represents your routes or items as a tree view, by default takes it takes the routes configuration as items, but you could provide your custom items that respects the following format :
 
@@ -22,14 +22,14 @@ You could also add any other field that you need it when you want to customize t
 
 ## Installation
 
-     npm install vue-router-tree --save
+     npm install vue3-router-tree --save
 
 ## Usage
 
 #### With router :
 
 ```html
-<vue-router-tree />
+<vue3-router-tree />
 ```
 
 #### with custom items :
@@ -37,14 +37,14 @@ You could also add any other field that you need it when you want to customize t
 ```html
 <template>
 	<div class="demo">
-		<vue-router-tree :items="routes"> </vue-router-tree>
+		<vue3-router-tree :items="routes"> </vue3-router-tree>
 	</div>
 </template>
 
 <script lang="ts">
 	import { defineComponent } from 'vue';
 
-	import VueRouterTree from '.vue-router-tree';
+	import Vue3RouterTree from '.vue3-router-tree';
 	export default defineComponent({
 		data() {
 			return {

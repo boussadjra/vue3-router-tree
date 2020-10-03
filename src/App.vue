@@ -1,13 +1,12 @@
 <template>
 <div class="demo">
-    <vue-router-tree :items="routes" title="My Tree">
+    <vue3-router-tree :items="routes" title="My Tree">
         <template #item="{item}">
             <component :is="'Carbon'+item.name.replace(/ /g,'')"></component>
             {{item.name}}
         </template>
-    </vue-router-tree>
+    </vue3-router-tree>
 
-    <router-view />
 </div>
 </template>
 
@@ -21,7 +20,7 @@ import CarbonDashboard from "./components/icons/CarbonDashboard.vue";
 import CarbonComponents from "./components/icons/CarbonComponents.vue";
 import CarbonMail from "./components/icons/CarbonMail.vue";
 
-import VueRouterTree from "./components/VueRouterTree/index";
+import Vue3RouterTree from "./components/Vue3RouterTree/index";
 export default defineComponent({
     data() {
         return {
@@ -118,7 +117,7 @@ export default defineComponent({
         };
     },
     components: {
-        VueRouterTree,
+        Vue3RouterTree,
         CarbonComponents,
         CarbonDashboard,
         CarbonHome,

@@ -234,21 +234,6 @@ module.exports = (!STRICT_METHOD || !USES_TO_LENGTH) ? function forEach(callback
 
 /***/ }),
 
-/***/ "1ae0":
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__("51f0");
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var add = __webpack_require__("499e").default
-var update = add("cd36c264", content, true, {"sourceMap":false,"shadowMode":false});
-
-/***/ }),
-
 /***/ "1be4":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1056,7 +1041,7 @@ module.exports = function (it, key) {
 
 /***/ }),
 
-/***/ "51f0":
+/***/ "51dd":
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -2743,6 +2728,21 @@ exports.f = wellKnownSymbol;
 
 /***/ }),
 
+/***/ "e810":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("51dd");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("5303e069", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "e893":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2927,10 +2927,10 @@ function _objectSpread2(target) {
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 
-// EXTERNAL MODULE: ./src/components/VueRouterTree/style.scss
-var style = __webpack_require__("1ae0");
+// EXTERNAL MODULE: ./src/components/Vue3RouterTree/style.scss
+var style = __webpack_require__("e810");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/components/VueRouterTree/CaretRight.vue?vue&type=template&id=64336f7e&bindings={}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader-v16/dist/templateLoader.js??ref--6!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/components/Vue3RouterTree/CaretRight.vue?vue&type=template&id=01e0ef0a&bindings={}
 
 var _hoisted_1 = {
   focusable: "false",
@@ -2944,22 +2944,22 @@ var _hoisted_2 = /*#__PURE__*/Object(external_commonjs_vue_commonjs2_vue_root_Vu
   fill: "currentColor"
 }, null, -1);
 
-function CaretRightvue_type_template_id_64336f7e_bindings_render(_ctx, _cache, $props, $setup, $data, $options) {
+function CaretRightvue_type_template_id_01e0ef0a_bindings_render(_ctx, _cache, $props, $setup, $data, $options) {
   return Object(external_commonjs_vue_commonjs2_vue_root_Vue_["openBlock"])(), Object(external_commonjs_vue_commonjs2_vue_root_Vue_["createBlock"])("svg", _hoisted_1, [_hoisted_2]);
 }
-// CONCATENATED MODULE: ./src/components/VueRouterTree/CaretRight.vue?vue&type=template&id=64336f7e&bindings={}
+// CONCATENATED MODULE: ./src/components/Vue3RouterTree/CaretRight.vue?vue&type=template&id=01e0ef0a&bindings={}
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/components/VueRouterTree/CaretRight.vue?vue&type=script&lang=js
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader-v16/dist??ref--0-1!./src/components/Vue3RouterTree/CaretRight.vue?vue&type=script&lang=js
 /* harmony default export */ var CaretRightvue_type_script_lang_js = ({
   name: "CaretRight"
 });
-// CONCATENATED MODULE: ./src/components/VueRouterTree/CaretRight.vue?vue&type=script&lang=js
+// CONCATENATED MODULE: ./src/components/Vue3RouterTree/CaretRight.vue?vue&type=script&lang=js
  
-// CONCATENATED MODULE: ./src/components/VueRouterTree/CaretRight.vue
+// CONCATENATED MODULE: ./src/components/Vue3RouterTree/CaretRight.vue
 
 
 
-CaretRightvue_type_script_lang_js.render = CaretRightvue_type_template_id_64336f7e_bindings_render
+CaretRightvue_type_script_lang_js.render = CaretRightvue_type_template_id_01e0ef0a_bindings_render
 
 /* harmony default export */ var CaretRight = (CaretRightvue_type_script_lang_js);
 // CONCATENATED MODULE: ./node_modules/vue-router/dist/vue-router.esm-bundler.js
@@ -5595,7 +5595,7 @@ function useRoute() {
 
 
 
-// CONCATENATED MODULE: ./src/components/VueRouterTree/index.ts
+// CONCATENATED MODULE: ./src/components/Vue3RouterTree/index.ts
 
 
 
@@ -5609,7 +5609,7 @@ function useRoute() {
 
 
 
-/* harmony default export */ var VueRouterTree = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
+/* harmony default export */ var Vue3RouterTree = (Object(external_commonjs_vue_commonjs2_vue_root_Vue_["defineComponent"])({
   props: {
     title: {
       type: String
@@ -5738,7 +5738,7 @@ function useRoute() {
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 
-/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (VueRouterTree);
+/* harmony default export */ var entry_lib = __webpack_exports__["default"] = (Vue3RouterTree);
 
 
 
@@ -5815,4 +5815,4 @@ module.exports = NATIVE_SYMBOL
 /***/ })
 
 /******/ })["default"];
-//# sourceMappingURL=vue-router-tree.common.js.map
+//# sourceMappingURL=vue3-router-tree.common.js.map
