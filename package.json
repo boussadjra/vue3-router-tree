@@ -1,6 +1,6 @@
 {
     "name": "vue3-router-tree",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "BOUSSADJRA BRAHIM",
     "private": false,
     "main": "./build/vue3-router-tree.common.js",
