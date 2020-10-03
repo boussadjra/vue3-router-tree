@@ -28,5 +28,23 @@
         "sass-loader": "^8.0.2",
         "typescript": "~3.9.3",
         "vue-jest": "^5.0.0-0"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/boussadjra/vue3-router-tree.git"
+    },
+    "license": "MIT",
+    "homepage": "https://boussadjra.github.io/vue3-router-tree/",
+    "files": [
+        "./build/vue3-router-tree.common.js",
+        "*.md"
+    ],
+    "keywords": [
+        "vue.js 3",
+        "vuejs 3",
+        "tree view",
+        "vue tree view",
+        "vue component",
+        "web component"
+    ]
 }
