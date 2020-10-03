@@ -2,10 +2,13 @@
 <div class="demo">
     <vue-router-tree :items="routes" title="My Tree">
         <template #item="{item}">
-            <component :is="'Carbon'+item.name"></component>
+            <component :is="'Carbon'+item.name.replace(/ /g,'')"></component>
+
             {{item.name}}
         </template>
     </vue-router-tree>
+
+    <router-view />
 </div>
 </template>
 
@@ -28,14 +31,17 @@ export default defineComponent({
             routes: [{
                     path: "/",
                     name: "Home",
+                    hasIcon: true
                 },
                 {
                     path: "/dashboard",
                     name: "Dashboard",
+                    hasIcon: true
                 },
                 {
                     path: "/component",
                     name: "Components",
+                    hasIcon: true,
                     children: [{
                             path: "/alerts",
                             name: "Alerts",
@@ -74,11 +80,29 @@ export default defineComponent({
                                 },
                             ],
                         },
+                        {
+                            path: '/pickers',
+                            name: 'Pickers',
+                            children: [{
+                                    path: '/date-picker',
+                                    name: 'Date picker'
+                                },
+                                {
+                                    path: '/time-picker',
+                                    name: 'Time picker'
+                                },
+                                {
+                                    path: '/color-picker',
+                                    name: 'Color picker'
+                                }
+                            ]
+                        }
                     ],
                 },
                 {
                     path: "/mail",
                     name: "Mail",
+                    hasIcon: true,
                     children: [{
                             path: "/sent",
                             name: "Sent",
@@ -112,22 +136,8 @@ export default defineComponent({
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // text-align: center;
-    color: #2c3e50;
-    box-shadow: 0 0 10px #ddd;
+
     width: min-content;
     min-width: 280px;
-}
-
-#nav {
-    padding: 30px;
-
-    a {
-        font-weight: bold;
-        color: #2c3e50;
-
-        &.router-link-exact-active {
-            color: #42b983;
-        }
-    }
 }
 </style>

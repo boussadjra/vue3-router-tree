@@ -1,5 +1,4 @@
 .vrt-tree {
-    // background-color: #F6F7EB;
     color: #444645;
     list-style: none;
     padding: 12px;
@@ -40,6 +39,9 @@
     &--has-children {
         padding: 8px 8px;
         position: relative;
+    }
+    &__wrapper {
+        box-shadow: 0 0 10px #ddd;
     }
 }
 

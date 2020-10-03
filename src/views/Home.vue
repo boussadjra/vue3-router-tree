@@ -12,6 +12,9 @@ import {
 
 export default defineComponent({
     name: 'Home',
+    mounted() {
+        console.log(this)
+    },
     components: {
 
     },
