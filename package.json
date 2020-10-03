@@ -1,6 +1,6 @@
 {
     "name": "vue3-router-tree",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "author": "BOUSSADJRA BRAHIM",
     "private": false,
     "main": "./build/vue3-router-tree.common.js",
@@ -35,7 +35,6 @@
     },
     "license": "MIT",
     "homepage": "https://boussadjra.github.io/vue3-router-tree/",
-
     "keywords": [
         "vue.js 3",
         "vuejs 3",
