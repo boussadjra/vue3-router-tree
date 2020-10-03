@@ -1,6 +1,6 @@
 # vue-router-tree
 
-This component represents your routes or items as a tree view, by default takes it takes the routes configuration as items, but you could provide your custom items that respects the following format :
+This component is based on **Vue.js 3**, it represents your routes or items as a tree view, by default takes it takes the routes configuration as items, but you could provide your custom items that respects the following format :
 
 ```js
 [
@@ -111,3 +111,4 @@ You could also add any other field that you need it when you want to customize t
 | Name | description                         |
 | ---- | ----------------------------------- |
 | item | override the default item rendering |
+
