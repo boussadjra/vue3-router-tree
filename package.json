@@ -2,7 +2,7 @@
     "name": "vue-router-tree",
     "version": "0.1.0",
     "author": "BOUSSADJRA BRAHIM",
-    "private": true,
+    "private": false,
     "main": "./build/vue-router-tree.common.js",
     "scripts": {
         "serve": "vue-cli-service serve",

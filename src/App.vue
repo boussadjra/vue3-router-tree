@@ -3,7 +3,6 @@
     <vue-router-tree :items="routes" title="My Tree">
         <template #item="{item}">
             <component :is="'Carbon'+item.name.replace(/ /g,'')"></component>
-
             {{item.name}}
         </template>
     </vue-router-tree>
@@ -16,9 +15,7 @@
 import {
     defineComponent
 } from "vue";
-import {
-    RouteRecordRaw
-} from "vue-router";
+
 import CarbonHome from "./components/icons/CarbonHome.vue";
 import CarbonDashboard from "./components/icons/CarbonDashboard.vue";
 import CarbonComponents from "./components/icons/CarbonComponents.vue";
@@ -31,12 +28,12 @@ export default defineComponent({
             routes: [{
                     path: "/",
                     name: "Home",
-                    hasIcon: true
+                    hasIcon: true,
                 },
                 {
                     path: "/dashboard",
                     name: "Dashboard",
-                    hasIcon: true
+                    hasIcon: true,
                 },
                 {
                     path: "/component",
@@ -81,22 +78,22 @@ export default defineComponent({
                             ],
                         },
                         {
-                            path: '/pickers',
-                            name: 'Pickers',
+                            path: "/pickers",
+                            name: "Pickers",
                             children: [{
-                                    path: '/date-picker',
-                                    name: 'Date picker'
+                                    path: "/date-picker",
+                                    name: "Date picker",
                                 },
                                 {
-                                    path: '/time-picker',
-                                    name: 'Time picker'
+                                    path: "/time-picker",
+                                    name: "Time picker",
                                 },
                                 {
-                                    path: '/color-picker',
-                                    name: 'Color picker'
-                                }
-                            ]
-                        }
+                                    path: "/color-picker",
+                                    name: "Color picker",
+                                },
+                            ],
+                        },
                     ],
                 },
                 {
@@ -125,7 +122,7 @@ export default defineComponent({
         CarbonComponents,
         CarbonDashboard,
         CarbonHome,
-        CarbonMail
+        CarbonMail,
     },
 });
 </script>
