@@ -35,10 +35,7 @@
     },
     "license": "MIT",
     "homepage": "https://boussadjra.github.io/vue3-router-tree/",
-    "files": [
-        "./build/vue3-router-tree.common.js",
-        "*.md"
-    ],
+
     "keywords": [
         "vue.js 3",
         "vuejs 3",
