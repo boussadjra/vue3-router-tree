@@ -2,6 +2,7 @@
 
 This component is based on **Vue.js 3**, it represents your routes or items as a tree view, by default takes it takes the routes configuration as items, but you could provide your custom items that respects the following format :
 
+
 ```js
 [
   {
@@ -20,6 +21,9 @@ This component is based on **Vue.js 3**, it represents your routes or items as a
 
 You could also add any other field that you need it when you want to customize the items rendering
 
+## Demo
+
+[LIVE DEMO](https://boussadjra.github.io/vue3-router-tree/) or you could check this [boilerplate](https://codesandbox.io/s/vue-3-router-tree-demo-wzxr1?file=/src/App.vue) on codesandbox
 ## Installation
 
      npm install vue3-router-tree --save
