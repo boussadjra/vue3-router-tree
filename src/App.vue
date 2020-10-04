@@ -308,6 +308,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    ;
+}
+
 .demo {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -320,8 +328,9 @@ export default defineComponent({
     padding: 24px;
 
     display: grid;
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 16px;
+    width: 100%;
 
     &>div {
         padding: 8px;
