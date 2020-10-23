@@ -6,6 +6,7 @@ interface TreeNode {
 	component: VNode;
 	children: Array<TreeNode>;
 	id: number;
+info?:string|number|boolean
 }
 import CaretRight from './CaretRight.vue'
 import { RouteRecordRaw, RouterLink } from 'vue-router';
@@ -51,7 +52,7 @@ export default defineComponent({
 		if (found) {
 			this.expandItem(found)
 		}
-	
+
 	},
 	methods: {
 		addId(items: Array<TreeNode | RouteRecordRaw>): any {
@@ -86,7 +87,7 @@ export default defineComponent({
 		},
 		renderItems(item: TreeNode, index: number): any {
 
-       
+
 
 			let slotContent = this.$slots.item ?
 				this.$slots.item({
@@ -106,7 +107,7 @@ export default defineComponent({
 						{ class: 'vrt-tree' },
 						this.renderTree(item.children)) : '')])
 			} else {
-				return h('li', { class: 'vrt-tree__item' }, item.component ? h(RouterLink, { to: item.path }, item.name) :slotContent)
+				return h('li', { class: 'vrt-tree__item' }, item.component ? h(RouterLink, { to: item.path }, item.name) : slotContent)
 			}
 		},
 	},

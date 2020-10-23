@@ -5,7 +5,9 @@
         <vue3-router-tree :items="routes">
             <template #item="{item}">
                 <icon :name="`${item.name.toLowerCase()}`" />
-                {{item.name }}
+                <span> {{item.name }}</span>
+
+                <span v-if="item.info" class="chip">{{item.info}}</span>
             </template>
         </vue3-router-tree>
     </div>
@@ -14,7 +16,9 @@
         <vue3-router-tree :items="files">
             <template #item="{item}">
                 <icon :name="`${item.type || 'file'}`" />
-                {{item.name}}
+                <span> {{item.name }}</span>
+
+                <span v-if="item.info" :style="{color:colors[item.info]}">{{item.info}}</span>
             </template>
         </vue3-router-tree>
     </div>
@@ -45,10 +49,13 @@ export default defineComponent({
                     path: "/dashboard",
                     name: "Dashboard",
                     hasIcon: true,
+
+                    info: 'updated'
                 },
                 {
                     path: "/component",
                     name: "Components",
+                    info: '+5',
                     hasIcon: true,
                     children: [{
                             path: "/alerts",
@@ -146,6 +153,7 @@ export default defineComponent({
                             children: [{
                                 name: "logo.png",
                                 file: "png",
+                                info: 'U'
                             }, ],
                         },
                         {
@@ -165,18 +173,22 @@ export default defineComponent({
                 {
                     name: "babel.config.js",
                     file: "js",
+                    info: 'M'
                 },
                 {
                     name: "package.json",
                     file: "json",
+                    info: 'M'
                 },
                 {
                     name: "README.md",
                     file: "md",
+                    info: 'U'
                 },
                 {
                     name: "vue.config.js",
                     file: "js",
+                    info: 'C'
                 },
                 {
                     name: "yarn.lock",
@@ -297,6 +309,13 @@ export default defineComponent({
                     name: "Binding Inline Styles",
                 },
             ],
+
+            colors: {
+                U: '#44ee44',
+                A: '#1222dd',
+                M: "#ee2245",
+                C: '#4425ff'
+            }
         };
     },
     components: {
@@ -321,7 +340,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     // text-align: center;
-    background-color: #f7f7f7;
+    background-color: #f9f9f9;
     color: #777;
     width: min-content;
     min-width: 280px;
@@ -335,5 +354,13 @@ body {
     &>div {
         padding: 8px;
     }
+}
+
+.chip {
+    padding: 2px 4px;
+    background: #f1ac5c;
+    color: rgb(66, 65, 65);
+    border-radius: 4px;
+    max-width: min-content;
 }
 </style>
