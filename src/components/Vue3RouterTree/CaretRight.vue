@@ -9,7 +9,7 @@ import {
     defineComponent
 } from "vue";
 
-defineComponent({
+export default defineComponent({
     name: 'CaretRight'
 })
 </script>
