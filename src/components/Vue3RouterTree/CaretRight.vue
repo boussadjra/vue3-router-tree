@@ -4,8 +4,12 @@
 </svg>
 </template>
 
-<script>
-export default {
-    name: "CaretRight",
-};
+<script lang="ts">
+import {
+    defineComponent
+} from "vue";
+
+defineComponent({
+    name: 'CaretRight'
+})
 </script>
