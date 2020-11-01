@@ -3,30 +3,38 @@
     <div>
         <h3>Sidebar menu</h3>
         <vue3-router-tree :items="routes">
-            <template #item="{item}">
+            <template #item="{ item }">
                 <icon :name="`${item.name.toLowerCase()}`" />
-                <span> {{item.name }}</span>
+                <span> {{ item.name }}</span>
 
-                <span v-if="item.info" class="chip">{{item.info}}</span>
+                <span v-if="item.info" class="chip">{{ item.info }}</span>
             </template>
         </vue3-router-tree>
     </div>
     <div>
         <h3>File structure</h3>
         <vue3-router-tree :items="files">
-            <template #item="{item}">
+            <template #item="{ item }">
                 <icon :name="`${item.type || 'file'}`" />
-                <span> {{item.name }}</span>
+                <span> {{ item.name }}</span>
 
-                <span v-if="item.info" :style="{color:colors[item.info]}">{{item.info}}</span>
+                <span v-if="item.info" :style="{ color: colors[item.info] }">{{
+            item.info
+          }}</span>
             </template>
         </vue3-router-tree>
     </div>
 
     <div>
         <h3>Vue 3 docs sidebar</h3>
-        <vue3-router-tree :items="docSidebar" activeColor="#42b983" style="background-color:#35495e;color:#f9f9f9"></vue3-router-tree>
+        <vue3-router-tree :items="docSidebar" activeColor="#42b983" style="background-color: #35495e; color: #f9f9f9"></vue3-router-tree>
     </div>
+
+    <div>
+        <h3>Usage with vue router</h3>
+        <demo-with-router />
+    </div>
+
 </div>
 </template>
 
@@ -34,7 +42,7 @@
 import {
     defineComponent
 } from "vue";
-
+import DemoWithRouter from "./DemoWithRouter";
 import Vue3RouterTree from "./components/Vue3RouterTree/index";
 import Icon from "./components/icons/Icon.vue";
 export default defineComponent({
@@ -50,12 +58,12 @@ export default defineComponent({
                     name: "Dashboard",
                     hasIcon: true,
 
-                    info: 'updated'
+                    info: "updated",
                 },
                 {
                     path: "/component",
                     name: "Components",
-                    info: '+5',
+                    info: "+5",
                     hasIcon: true,
                     children: [{
                             path: "/alerts",
@@ -153,7 +161,7 @@ export default defineComponent({
                             children: [{
                                 name: "logo.png",
                                 file: "png",
-                                info: 'U'
+                                info: "U",
                             }, ],
                         },
                         {
@@ -173,22 +181,22 @@ export default defineComponent({
                 {
                     name: "babel.config.js",
                     file: "js",
-                    info: 'M'
+                    info: "M",
                 },
                 {
                     name: "package.json",
                     file: "json",
-                    info: 'M'
+                    info: "M",
                 },
                 {
                     name: "README.md",
                     file: "md",
-                    info: 'U'
+                    info: "U",
                 },
                 {
                     name: "vue.config.js",
                     file: "js",
-                    info: 'C'
+                    info: "C",
                 },
                 {
                     name: "yarn.lock",
@@ -311,17 +319,18 @@ export default defineComponent({
             ],
 
             colors: {
-                U: '#44ee44',
-                A: '#1222dd',
+                U: "#44ee44",
+                A: "#1222dd",
                 M: "#ee2245",
-                C: '#4425ff'
-            }
+                C: "#4425ff",
+            },
         };
     },
     components: {
         Vue3RouterTree,
 
         Icon,
+        DemoWithRouter,
     },
 });
 </script>
@@ -332,7 +341,6 @@ body {
     margin: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    ;
 }
 
 .demo {

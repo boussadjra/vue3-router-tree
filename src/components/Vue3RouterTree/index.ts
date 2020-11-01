@@ -41,7 +41,7 @@ export default defineComponent({
 	},
 	computed: {
 		menuItems(): Array<TreeNode> {
-			let _items = this.items ? this.items : this.$router.options.routes;
+			let _items = this.items ? this.items : this.$router.options?.routes || this.$router.getRoutes() ;
 
 			return this.addId(_items)
 		}
