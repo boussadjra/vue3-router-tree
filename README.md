@@ -48,7 +48,7 @@ You could also add any other field that you need it when you want to customize t
 <script lang="ts">
 	import { defineComponent } from 'vue';
 
-	import Vue3RouterTree from '.vue3-router-tree';
+	import Vue3RouterTree from 'vue3-router-tree';
 	export default defineComponent({
 		data() {
 			return {
