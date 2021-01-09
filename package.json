@@ -7,15 +7,18 @@
     "scripts": {
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "bundle": "vue-cli-service build --dest build --target lib --name vue3-router-tree ./src/components/Vue3RouterTree/index.ts",
+        "bundle": "vue-cli-service build --dest build --target lib --name vue3-router-tree ./src/components/Vue3RouterTree/index.tsx",
         "test:unit": "vue-cli-service test:unit"
     },
     "dependencies": {
         "core-js": "^3.6.5",
-        "vue": "^3.0.0-0"
+        "prismjs": "^1.23.0",
+        "vue": "^3.0.0-0",
+        "vue-router": "^4.0.2"
     },
     "devDependencies": {
         "@types/jest": "^24.0.19",
+        "@types/prismjs": "^1.16.2",
         "@vue/cli-plugin-babel": "~4.5.0",
         "@vue/cli-plugin-router": "~4.5.0",
         "@vue/cli-plugin-typescript": "~4.5.0",
@@ -24,8 +27,11 @@
         "@vue/cli-service": "~4.5.0",
         "@vue/compiler-sfc": "^3.0.0-0",
         "@vue/test-utils": "^2.0.0-0",
+        "autoprefixer": "^9.8.6",
         "node-sass": "^4.12.0",
+        "postcss": "^7.0.35",
         "sass-loader": "^8.0.2",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
         "typescript": "~3.9.3",
         "vue-jest": "^5.0.0-0"
     },

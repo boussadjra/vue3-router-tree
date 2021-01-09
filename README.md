@@ -2,7 +2,6 @@
 
 This component is based on **Vue.js 3**, it represents your routes or items as a tree view, by default takes it takes the routes configuration as items, but you could provide your custom items that respects the following format :
 
-
 ```js
 [
   {
@@ -24,6 +23,7 @@ You could also add any other field that you need it when you want to customize t
 ## Demo
 
 [LIVE DEMO](https://boussadjra.github.io/vue3-router-tree/) or you could check this [boilerplate](https://codesandbox.io/s/vue-3-router-tree-demo-wzxr1?file=/src/App.vue) on codesandbox
+
 ## Installation
 
      npm install vue3-router-tree --save
@@ -105,14 +105,16 @@ You could also add any other field that you need it when you want to customize t
 
 ### props :
 
-| Name        | default   | description                                                                          |
-| ----------- | --------- | ------------------------------------------------------------------------------------ |
-| items       | []        | the tree items or if not provided the component renders the current available routes |
-| activeColor | "#5d1df1" | the color of the active sub node                                                     |
+| Name          | default   | description                                                                                     |
+| ------------- | --------- | ----------------------------------------------------------------------------------------------- |
+| items         | []        | the tree items or if not provided the component renders the current available routes            |
+| active-color  | "#5d1df1" | the color of the active sub node                                                                |
+| default-open  | ''        | specify the default opened path                                                                 |
+| exclude-field | ''        | In your route config you could specify a field inside meta option which will be used to exclude |
+| open-all      | ''        | Expand all items that have children                                                             |
 
 ## slots :
 
 | Name | description                         |
 | ---- | ----------------------------------- |
 | item | override the default item rendering |
-

@@ -1,9 +1,9 @@
 <template>
-<svg v-if="name==='folder'" aria-hidden="true" focusable="false" role="img" class="fill-current fill-current--carbon" width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);">
+<svg v-if="name==='folder'" aria-hidden="true" focusable="false" role="img" class="iconify iconify--carbon" width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);">
     <path d="M11.17 6l3.42 3.41l.58.59H28v16H4V6h7.17m0-2H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2H16l-3.41-3.41A2 2 0 0 0 11.17 4z" fill="currentColor" />
 </svg>
 
-<svg v-if="name==='file'" aria-hidden="true" focusable="false" role="img" class="fill-current fill-current--carbon" width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);">
+<svg v-if="name==='file'" aria-hidden="true" focusable="false" role="img" class="iconify iconify--carbon" width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);">
     <path d="M25.7 9.3l-7-7c-.2-.2-.4-.3-.7-.3H8c-1.1 0-2 .9-2 2v24c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V10c0-.3-.1-.5-.3-.7zM18 4.4l5.6 5.6H18V4.4zM24 28H8V4h8v6c0 1.1.9 2 2 2h6v16z" fill="currentColor" />
     <path d="M10 22h12v2H10z" fill="currentColor" />
     <path d="M10 16h12v2H10z" fill="currentColor" />
@@ -31,12 +31,12 @@
     <path d="M28 6H4a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-2.2 2L16 14.78L6.2 8zM4 24V8.91l11.43 7.91a1 1 0 0 0 1.14 0L28 8.91V24z" fill="currentColor" />
 </svg>
 
-<svg v-if="name==='forms'" aria-hidden="true" focusable="false" role="img" class="fill-current fill-current--carbon" width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);">
+<svg v-if="name==='forms'" aria-hidden="true" focusable="false" role="img" class="iconify iconify--carbon" width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);">
     <path d="M2 26h28v2H2z" fill="currentColor"></path>
     <path d="M25.4 9c.8-.8.8-2 0-2.8l-3.6-3.6c-.8-.8-2-.8-2.8 0l-15 15V24h6.4l15-15zm-5-5L24 7.6l-3 3L17.4 7l3-3zM6 22v-3.6l10-10l3.6 3.6l-10 10H6z" fill="currentColor"></path>
 </svg>
 
-<svg v-if="name==='pickers'" aria-hidden="true" focusable="false" role="img" class="fill-current fill-current--carbon" width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);">
+<svg v-if="name==='pickers'" aria-hidden="true" focusable="false" role="img" class="iconify iconify--carbon" width="20px" height="20px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32" style="transform: rotate(360deg);">
     <path d="M2 27h3v3H2z" fill="currentColor"></path>
     <path d="M29.71 7.29l-5-5a1 1 0 0 0-1.41 0L20 5.59l-1.29-1.3l-1.42 1.42L18.59 7L8.29 17.29A1 1 0 0 0 8 18v1.59l-2.71 2.7a1 1 0 0 0 0 1.41l3 3a1 1 0 0 0 1.41 0l2.71-2.7H14a1 1 0 0 0 .71-.29L25 13.41l1.29 1.3l1.42-1.42l-1.3-1.29l3.3-3.29a1 1 0 0 0 0-1.41zM13.59 22h-2L9 24.59L7.41 23L10 20.41v-2l10-10L23.59 12zM25 10.59L21.41 7L24 4.41L27.59 8z" fill="currentColor"></path>
 </svg>
